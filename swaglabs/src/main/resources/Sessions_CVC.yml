@@ -1,0 +1,33 @@
+Android_Run:
+   OS: ANDROID
+   BUILD_VERSION : '12'
+   APP_NAME: android-app-mobilebanking.apk
+   DEVICE_ID: 'Android GoogleAPI Emulator'
+   PLATFORM_VERSION: '11'
+   DEVICE_NAME: Android GoogleAPI Emulator
+   APPIUM_IP: 0.0.0.0
+   APPIUM_PORT: '4726'
+   BOOTSTRAP: '1238'
+   UNAME: oauth-hiftikhar44-b0266
+   APP_LANG: English
+   APP: https://github.com/saucelabs/sample-app-mobile/releases/download/2.7.1/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk
+   ACCESS_KEY: '4f680a18-3571-4144-b144-dccec2ccdbf4'
+   SAUCELABS_URL: 'ondemand.eu-central-1.saucelabs.com:443'
+   HOST: 'CLOUD'
+   
+IOS_Run:
+   OS: iOS
+   BUILD_VERSION : '283'
+   APP_NAME: iOS-app-mobilebanking.ipa
+   DEVICE_ID: 'iPhone 8 Plus'
+   PLATFORM_VERSION: '13.1.2'
+   DEVICE_NAME: iPhone 8 Plus
+   APPIUM_IP: 0.0.0.0
+   APPIUM_PORT: '4726'
+   BOOTSTRAP: '1238'
+   UNAME: oauth-hiftikhar44-b0266
+   APP_LANG: English
+   APP: https://github.com/saucelabs/sample-app-mobile/releases/download/2.7.1/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk
+   ACCESS_KEY: '4f680a18-3571-4144-b144-dccec2ccdbf4'
+   SAUCELABS_URL: 'ondemand.eu-central-1.saucelabs.com:443'
+   HOST: 'CLOUD'
