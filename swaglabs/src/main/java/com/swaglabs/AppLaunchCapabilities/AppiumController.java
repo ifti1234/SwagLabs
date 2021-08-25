@@ -62,6 +62,8 @@ public class AppiumController {
                 capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY,
                         config.getProperty("APP_ACTIVITY"));
                 capabilities.setCapability(MobileCapabilityType.APP, config.getProperty("APP"));
+                capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT,
+                        config.getProperty("SESSION_TIMEOUT"));
 
                 if (config.getProperty("HOST").equalsIgnoreCase("CLOUD")) {
                     System.out.println("-------Running on SauceLabs-------");
@@ -118,33 +120,40 @@ public class AppiumController {
     }
 
     public void appClose(Properties config) {
-        try {
-            if (driver != null) {
-                switch (config.getProperty("OS")) {
-
-                    default:
-                        System.out.println("OS version is not correct");
-                        break;
-
-                    case "ANDROID":
-                        driver.executeScript("seetest: client.applicationClose(\"cloud:com.adib.mobile\")");
-                        break;
-                    case "IOS":
-                        if (config.getProperty("HOST").equalsIgnoreCase("CLOUD")) {
-                            driver.executeScript("seetest: client.applicationClose(\"cloud:com.adib.mobilebanking\")");
-                        } else {
-                            driver.closeApp();
-                        }
-                        break;
-                }
-                driver.quit();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            driver = null;
-        } finally {
-            driver = null;
-        }
+//        try {
+//            if (driver != null) {
+//                switch (config.getProperty("OS")) {
+//
+//                    default:
+//                        System.out.println("OS version is not correct");
+//                        break;
+//
+//                    case "ANDROID":
+//                        driver.executeScript("seetest: client.applicationClose(\"cloud:com.adib.mobile\")");
+//                        break;
+//                    case "IOS":
+//                        if (config.getProperty("HOST").equalsIgnoreCase("CLOUD")) {
+//                            driver.executeScript("seetest: client.applicationClose(\"cloud:com.adib.mobilebanking\")");
+//                        } else {
+//                            driver.closeApp();
+//                        }
+//                        break;
+//                }
+//                driver.quit();
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            driver = null;
+//        } finally {
+//            driver = null;
+//        }
+    	try {
+			if (driver != null) {
+				driver.quit();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
     }
 
     public void uninstallApplication(Properties config) {

@@ -10,7 +10,7 @@ import cucumber.api.junit.Cucumber;
         "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", "rerun:target/failed_scenarios.txt",
         "pretty", "json:target/cucumber_reports/Cucumber.json",
         "io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm" }, glue = { "stepDefinition" }, tags = {
-        "@SwagLabsAddToCart" }, dryRun = false, monochrome = true, junit = "--step-notifications")
+        "@SwagLabsCheckOutCart" }, dryRun = false, monochrome = true, junit = "--step-notifications")
 
 public class TestRunner {
 
